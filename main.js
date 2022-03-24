@@ -32,14 +32,12 @@ const conbtn = document.getElementById('submit-button')
 const inputs = document.querySelector('form')
 conbtn.addEventListener("click", () => {
   Email.send({
-    Host : "smtp.mailtrap.io",
-    Username : "88e828c2330534",
-    Password : "b4408e6641144e",
+    SecureToken : "1c70533c-54c4-44c2-927d-ce150c207def",
     To : 'devs3coder@gmail.com',
     From : inputs.elements["email"].value,
     Subject : "A Message From Your Website ",
     Body : inputs.elements["message"].value + "<br>" + inputs.elements["name"].value
-  }).then(msg => alert("Message Successfully Sent"))
+  }).then(msg => alert("Still needs fixing. Please send me a message using my email on the left"))
 
   
 })

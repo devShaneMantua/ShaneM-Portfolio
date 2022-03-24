@@ -37,7 +37,7 @@ conbtn.addEventListener("click", () => {
     From : inputs.elements["email"].value,
     Subject : "A Message From Your Website ",
     Body : inputs.elements["message"].value + "<br>" + inputs.elements["name"].value
-  }).then(msg => alert("Still needs fixing. Please send me a message using my email on the left"))
+  }).then(msg => alert("Still needs fixing. Please send me a message using my Email"))
 
   
 })

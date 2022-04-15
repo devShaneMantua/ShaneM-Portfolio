@@ -1,5 +1,5 @@
 # ShaneM-portfolio
-https://devshanemantua.github.io/ShaneM-portfolio/
+https://devshanemantua.github.io/ShaneM-Portfolio/
 
 Time finished: March 14 - March 24
 

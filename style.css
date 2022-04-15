@@ -791,6 +791,7 @@ svg {
 .contact{
   width:100%;
   padding:20px;
+  background:#0d0d0d;
   
 }
 .contact::before{

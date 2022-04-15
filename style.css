@@ -1,6 +1,4 @@
 
-/*=============== BASE ===============*/
-
 * {
   margin: 0;
   padding:0;
@@ -18,7 +16,7 @@ body,button,input{
 }
 
 body {
-  background-color:#0d0d0d;
+  background-color:#fb839e;
   color:#d9d9d9;
   
 }
@@ -116,7 +114,7 @@ button,input{
 .nav_link{
   height: 100%;
   line-height: 70px;
-  padding: 0 3rem;
+  padding: 0 1.6rem;
   color:#fb839e;
   font-size:17px;
   font-weight: 600;
@@ -289,8 +287,6 @@ button,input{
 
 .about{
   width:100%;
-  background:#fb839e;
- 
 }
 
 h2{
@@ -303,7 +299,6 @@ h2{
 
 .inner-width{
   max-width:1250px;
-  overflow:hidden;
   padding:0 20px;
   margin:auto;
 }
@@ -375,65 +370,103 @@ h2{
 
 
 .skills{
-  padding-left:30px;
+   position: relative;
+   margin: 1.5rem auto;
+   width: 350px;
+   height: 350px;
+   background: radial-gradient(350px, #cd5e77, transparent 50%);
 }
 
-.skill{
-  margin-bottom: 20px;
+.skills-img .center-icon{
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform: translate(-50%, -50%);
+   height: 200px;
 }
 
-.stitle{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color:#fff;
-  margin:10px;
+.skills-img .img-text{
+  position: relative;
+  top:-190px;
+  text-align:center;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
 }
 
-.progress{
-  width:100%;
-  height:15px;
-  background:#595959;
-  border-radius:12px;
+.skills-img:hover .img-text{
+  visibility: visible;
+  opacity: 1;
 }
 
-.progress-bar{
-  height:15px;
-  background-color:#0d0d0d;
-  border-radius:12px;
-  animation: fillBars 10.5s 1;
+.skill-icons{
+   height: 100%;
+   animation: rotation 60s linear infinite;
+  
 }
 
-.progress-bar span{
-  float:right;
-  margin-right:6px;
-  line-height:13px;
-  color:#fff;
-  font-size:15px;
+@keyframes rotation{
+   100%{
+      transform: rotate(360deg);
+   }
 }
 
-@keyframes fillBars{
-  from{
-    width: 0;
-  }
-  to{
-    width: 100%;
-  }
+
+.skil-con{
+   position: absolute;
+   height: 5rem;
 }
+
+.skill-icons .first{
+  top:0%;
+  left:0%;
+}
+
+.skill-icons .second{
+  top:0%;
+  left:80%;
+}
+
+.skill-icons .third{
+  top:80%;
+  left:0%;
+}
+
+.skill-icons .fourth{
+  top:80%;
+  left:80%;
+}
+
+.skil-con .img-text{
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+}
+
+.skil-con:hover .img-text{
+  visibility: visible;
+  opacity: 1;
+}
+
+
   
 
 /*===== MY WORK =====*/
 
 .mywork{
-  background:#fb839e;
   overflow:hidden;
   display:flex;
   flex-wrap:wrap;
 }
 
-.project{
+.portfolio{
   justify-content:center;
   align-items: center;
   flex-direction:column;
@@ -558,7 +591,7 @@ h2{
   position:relative;
   float:right;
   transform:skewY(-10deg);
-  margin:50px 100px 200px 0px;
+  margin:50px 100px 100px 0px;
 }
 
 .designCard{
@@ -662,7 +695,95 @@ h2{
   font-size:29px;
 }
 
+/*===== Project Section =====*/
+.projects{
+  background:#fb839e;
+  overflow:hidden;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+  background: #000;
+}
 
+svg {
+  display: block;
+}
+
+.projects .portname{
+   color:#212121;
+   margin-top: 10px;
+}
+
+.projects .pj-container{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transform-style: preserve-3d;
+  
+}
+
+.projects .pj-container .p-box{
+   position: relative;
+   width:450px;
+   height: 234px;
+   margin: 50px 50px;
+   background: #3d3d3d;
+   transform-style: preserve-3d;
+}
+
+
+.projects .pj-container .p-box .p-imgbx{
+   position: absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height: 100%;
+}
+
+.projects .pj-container .p-box:hover{
+   box-shadow: 0 20px 40px rgba(255,255,255,.2);
+}
+
+.projects .pj-container .p-box .p-contentbx{
+   position: absolute;
+   top:50%;
+   left: 50px;
+   right: 50px;
+   background: #fff;
+   transform: translateZ(20px) scaleY(0);
+   padding: 10px 25px;
+   transform-origin: top;
+   transition:0.5s;
+   transform-style: preserve-3d;
+   color: #000;
+}
+
+.projects .pj-container .p-box:hover .p-contentbx{
+   transform: translateZ(50px) scaleY(1);
+}
+
+.projects .pj-container .p-box .p-contentbx h4{
+   text-align:center;
+   letter-spacing: 3px;
+   font-family: 'Montserrat', sans-serif;
+   padding-bottom:5px;
+}
+
+.projects .pj-container .p-box .p-contentbx a{
+   font-family: 'Montserrat', sans-serif;
+   letter-spacing: 3px;
+   color:#000;
+   font-size: 13px;
+   padding:0px 10px;
+   float: right;
+  
+}
+
+.projects .pj-container .p-box .p-contentbx a:hover{
+   color:#fb839e;
+}
 
   
 /*===== Contact Section =====*/
@@ -1106,6 +1227,23 @@ footer .wave#wave4{
 
 @media screen and (max-width: 1023px) {
   
+  .skills{
+   width: 290px;
+   height: 290px;
+   background: radial-gradient(290px, #cd5e77, transparent 50%);
+  }
+
+  .skills-img .center-icon{
+   height: 150px;
+  }
+  .skil-con img{
+   height: 50px;
+  }
+  
+  .projects .pj-container{
+   flex-direction:column;
+   }
+  
   .contact{
     overflow:hidden
   }
@@ -1219,6 +1357,7 @@ footer .wave#wave4{
   
   .home{
     background-image:none;
+    background: #0d0d0d;
     height:initial;
     align-items: initial;
     padding:7rem 0 7rem;
@@ -1263,7 +1402,27 @@ footer .wave#wave4{
     font-size:12px;
     padding:5px 15px;
   }
+  
+  
+  .skills{
+   width: 222px;
+   height: 210px;
+   background: radial-gradient(210px, #cd5e77, transparent 50%);
+  }
 
+  .skills-img .center-icon{
+   height: 100px;
+  }
+  .skil-con img{
+   height: 40px;
+  }
+  .skills-img .img-text{
+     left:-10px;
+     font-size: 1.5rem;
+  }
+  .skil-con .img-text{
+    font-size: 0.6rem;
+  }
  
   /*Portfolio*/
   
@@ -1361,6 +1520,16 @@ footer .wave#wave4{
    font-size:19px;
   }
   
+  .projects{
+     overflow: visible;
+  }
+  .projects .pj-container .p-box{
+   width:330px;
+   height: 114px;
+   margin:0px auto;
+   margin-bottom: 120px;
+  }
+  
   .contact::before{
    width:350px;
    height:350px;
@@ -1378,13 +1547,6 @@ footer .wave#wave4{
   .fsocial-btn .icon{
    height:40px;
    width:40px;
-  }
-
-  .fsocial-btn span{
-  font-size:24px;
-  font-weight:600px;
-  line-height:50px;
-  
   }
 
   .fsocial-btn .icon i{

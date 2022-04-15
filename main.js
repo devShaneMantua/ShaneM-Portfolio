@@ -1,4 +1,9 @@
 
+AOS.init({
+   duration:800,
+   offset:150,
+})
+
 var typed = new Typed (".auto-type", {
     strings:["Frontend Developer" , "Web Designer"],
     typeSpeed: 100,
@@ -41,6 +46,12 @@ conbtn.addEventListener("click", () => {
 
   
 })
+
+/*Vanilla tilt js*/
+VanillaTilt.init(document.querySelectorAll(".p-box")), {
+   max:25,
+   speed:400
+}
 
 
 

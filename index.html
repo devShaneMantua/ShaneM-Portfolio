@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--========== UNICONS ==========-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    
 
     <!--========== MAIN CSS ==========-->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link href="https://fonts.googleapis.com/css?family=Halant|Raleway:300,700|Montserrat:700|Satisfy" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
     
     <!--========== MAIN JS ==========-->
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="vanilla-tilt.js"></script>
     
 
     <title>Shane Del Moira Mantua </title>
@@ -41,6 +43,9 @@
              </li>
              <li class="nav_item">
                <a href="#about" class="nav_link">About</a>
+             </li>
+             <li class="nav_item">
+               <a href="#projects" class="nav_link">Projects</a>
              </li>
              <li class="nav_item">
                <a href="#contact" class="nav_link">Contact</a>
@@ -81,11 +86,11 @@
           <div class="home_container container grid">
             <img src="img/small-mepic.png" alt="Me" class="small-mepic">
             
-            <div class="home_data">
+            <div class="home_data" data-aos="fade-right" data-aos-delay="200">
               <p class="home_hey"> Hey There, </p>
               <h1 class="home_name"> I'm <span>Shane Mantua</span></h1>
               <h3 class="home_job"> a <span class="auto-type"></span></h3>
-              <a href="#about" class="button"> More About Me <i class="uil uil-chat-bubble-user button_icon"></i></a>
+              <a href="#about" class="button" data-aos="zoom-in" data-aos-delay="600"> More About Me <i class="uil uil-chat-bubble-user button_icon"></i></a>
              
             </div>
           </div>
@@ -110,38 +115,33 @@
              
              <div class="about-section-col">
                <div class="skills">
+                <div class="skill-icons">
+                 <div class="skil-con first">
+                     <img src="img/html.png" alt="html">
+                    <p class="img-text">HTML5</p>
+                 </div>
                  
-                 <div class="skill">
-                   <div class="stitle">HTML5</div>
-                   <div class="progress">
-                     <div class="progress-bar" style="max-width:85%"> <span>85%</span></div>
-                   </div>
-                  </div>
+                 <div class="skil-con second">
+                     <img src="img/css.png" alt="css">
+                    <p class="img-text">CSS3</p>
+                 </div>
                  
-                  <div class="skill">
-                   <div class="stitle">CSS3</div>
-                   <div class="progress">
-                     <div class="progress-bar" style="max-width:70%"><span>70%</span></div>
-                   </div>
-                  </div>
+                 <div class="skil-con third">
+                     <img src="img/javascript.png" alt="javascript">
+                    <p class="img-text">JAVASCRIPT</p>
+                 </div>
                  
-                  <div class="skill">
-                   <div class="stitle">Javascript</div>
-                   <div class="progress">
-                     <div class="progress-bar" style="max-width:47%"><span>47%</span></div>
-                   </div>
-                  </div>
-                  
-                  <div class="skill">
-                   <div class="stitle">Web Design</div>
-                   <div class="progress">
-                     <div class="progress-bar" style="max-width:90%"><span>90%</span></div>
-                   </div>
-                  </div>
-                 
-                 
-                 
-               </div>
+                 <div class="skil-con fourth">
+                    <img src="img/web-design.png" alt="web design">
+                    <p class="img-text">DESIGN</p>
+                 </div>
+                </div>
+
+                 <div class="skills-img">
+                 <img class="center-icon" src="img/center-pic.png" alt="">
+                 <p class="img-text">SKILLS</p>
+                 </div>
+              </div>
              </div>
              
            </div>
@@ -150,10 +150,10 @@
         </section>
         
         
-        <!--========== MY WORK ==========-->
+        <!--========== PORTFOLIO ==========-->
         
         <section class="mywork">
-         <div class="project" id="project">
+         <div class="portfolio">
            <h2 class="portname">--Port<span>folio--</span>
              <div class="subnotice">
                <p>Switch to mobile view if it’s hard to read.<br> Sorry for the inconvenience.</p>
@@ -182,7 +182,7 @@
          <div class="card">
            <div class="designCard">
              <div class="card-content">
-               <p><span>I Design Simple Yet Beautiful Websites</span><br>I keep it simple, clean, easy to navigate, and easy to read. I choose the appropriate color scheme and implement the seven design principles to produce a visually appealing website.
+               <p><span>I Design Simple Yet Beautiful Websites</span><br>I keep it simple, clean, easy to navigate, and easy to read. I choose the appropriate color scheme and implement the design principles to produce a visually appealing website.
                </p>
              </div>
              <div class="cardImg">
@@ -192,6 +192,43 @@
            </div>
           </div>
        </section>
+            
+       <svg viewBox="0 0 1440 319">
+        <path fill="#000" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+       </svg>     
+        
+       <!--========== MY WORK ==========-->    
+       <section class="projects" id="projects">
+         <h2 class="portname">My <span>Work</span></h2>
+         <div class="pj-container">
+          <div class="p-box">
+             <div class="p-imgbx">
+                <img src="img/s-bookstore.png">
+             </div>
+             <div class="p-contentbx">
+                <h4>SHANE BOOKSTORE</h4>
+                <p>For my second website, I made a fake online bookstore using Html, Pure CSS, Javascript and Swiper Js.</p>
+                <a href="https://github.com/devShaneMantua" target="_blank">LINK<i class="uil uil-desktop-cloud-alt"></i></a>
+                <a href="https://github.com/devShaneMantua" target="_blank">CODE<i class="uil uil-github"></i> </a>
+             </div>
+          </div>
+          
+          <div class="p-box">
+             <div class="p-imgbx">
+                <img src="img/coming-soon.jpg">
+             </div>
+             <div class="p-contentbx">
+                <h4>More Projects to Come!</h4>
+                <p>I will make more projects once I get a proper device to install visual studio code ^_^ </p>
+             </div>
+          </div>
+          
+         </div>
+         <svg viewBox="0 0 1440 319">
+          <path fill="#0d0d0d" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
+       </section>    
+            
         <!--===== CONTACT =====-->
         
         <section class="contact section" id="contact">

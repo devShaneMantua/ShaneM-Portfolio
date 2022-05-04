@@ -407,12 +407,12 @@ h2{
    animation: rotation 60s linear infinite;
   
 }
-
+   
 @keyframes rotation{
    100%{
       transform: rotate(360deg);
    }
-}
+}    
 
 
 .skil-con{
@@ -421,24 +421,36 @@ h2{
 }
 
 .skill-icons .first{
-  top:0%;
-  left:0%;
+  top:-5%;
+  left:40%;
 }
 
 .skill-icons .second{
-  top:0%;
+  top:25%;
   left:80%;
 }
 
 .skill-icons .third{
-  top:80%;
-  left:0%;
+  top:65%;
+  left:80%;
 }
 
 .skill-icons .fourth{
-  top:80%;
-  left:80%;
+  top:85%;
+  left:40%;
 }
+
+.skill-icons .five{
+  top:25%;
+  left:0%;
+}
+
+.skill-icons .six{
+  top:65%;
+  left:0%;
+}
+
+
 
 .skil-con .img-text{
   color: #000;
@@ -721,7 +733,6 @@ svg {
    justify-content: center;
    align-items: center;
    transform-style: preserve-3d;
-  
 }
 
 .projects .pj-container .p-box{
